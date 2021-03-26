@@ -16,7 +16,7 @@ class RestData {
       return new Future.value(new User(null, username, password, flagLogged));
     } else {
       flagLogged = "not";
-      return new Future.value(new User(null, username, password, flagLogged));
+      return new Future.value(new User(null, username, password, flagLogged));                                         
     }
   }
 }
