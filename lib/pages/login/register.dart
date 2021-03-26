@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:fluttermap/models/user.dart';
+import 'package:fluttermap/data/databaseHelper.dart';
 
 class RegisterPage extends StatefulWidget {
   @override
