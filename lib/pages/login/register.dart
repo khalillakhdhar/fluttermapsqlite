@@ -76,5 +76,17 @@ class _RegisterPageState extends State<RegisterPage> {
     );
   }
 
-  void _submit() {}
+  void _submit() {
+    final form = formKey.currentState;
+    if (form.validate()) {
+      setState(() {
+        _isLoading = true;
+        form.save();
+        var user = new User(_name, _username, _password, null);
+        var db = new DatabaseHelper();
+        db.saveUser(user);
+        _isLoading = false;
+      });
+    }
+  }
 }
